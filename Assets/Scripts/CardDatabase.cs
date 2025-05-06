@@ -29,6 +29,10 @@ public class CardDataLoader : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    //public void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.T)) StartCoroutine(LoadCharacterDeck());
+    //}
     public void SelectedCharacter(GameObject button)
     {
         //string teamName = button.name;
@@ -115,16 +119,16 @@ public class CardDataLoader : MonoBehaviour
             case "Dragon":
                 deckRanges.Add((85, 110));
                 break;
-            case "Chef":
+            case "Alchemist":
                 deckRanges.Add((25, 40));
                 break;
-            case "Druid":
+            case "Elemental":
                 deckRanges.Add((40, 55));
                 break;
             case "Spawn":
                 deckRanges.Add((70, 85));
                 break;
-            case "Ghost":
+            case "Haunted Armor":
                 deckRanges.Add((55, 70));
                 break;
         }

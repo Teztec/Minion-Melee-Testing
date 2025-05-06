@@ -4,92 +4,73 @@ using DG.Tweening;
 public class HandCardBehavior : MonoBehaviour
 {
     public CardData cardData;
-    public void Init(HandManager handManager, CardData cardData)
+    private bool isMouseDown = false;
+    private Collider2D col;
+    private Vector3 startDragPosition;
+    private Quaternion originalRotation;
+    private bool isFlipped = false;
+    public void Init(CardData cardData)
     {
         this.cardData = cardData;
     }
 
     private void OnMouseEnter()
     {
-        if (cardData == null)
-        {
-            Debug.LogError("cardData is null in HandCardBehavior.");
-            return;
-        }
-
+        if (cardData == null || HandManager.IsDraggingCard) return;
         Vector3 hoverPosition = transform.position + Vector3.up * 3f;
         CardHoverSystem.Instance.Show(cardData, hoverPosition);
+
     }
-
-
     private void OnMouseExit()
     {
+        if (HandManager.IsDraggingCard) return;
         CardHoverSystem.Instance.Hide();
+
     }
-    //public CardData cardData;
-    //private Vector3 originalScale;
-    //private Vector3 originalPosition;
-    //private bool isHovered = false;
-    //private SpriteRenderer spriteRenderer;
-
-    //// Sorting order of the card
-    //private int originalSortingOrder;
-
-    //public void Init(HandManager handManager, CardData cardData)
-    //{
-    //    this.cardData = cardData;
-    //    spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-    //    if (spriteRenderer != null)
-    //    {
-    //        originalSortingOrder = spriteRenderer.sortingOrder;
-    //    }
-    //}
-
-    //private void Start()
-    //{
-    //    originalScale = transform.localScale;
-    //    originalPosition = transform.localPosition;
-    //}
-
-    //private Tween scaleTween;
-    //private Tween moveTween;
-
-    //private void OnMouseEnter()
-    //{
-    //    if (isHovered) return;
-    //    isHovered = true;
-
-    //    scaleTween?.Kill();
-    //    moveTween?.Kill();
-
-    //    // Scale and move the card forward on hover
-    //    scaleTween = transform.DOScale(originalScale * 1.2f, 0.2f);
-    //    moveTween = transform.DOLocalMoveZ(originalPosition.z - 0.5f, 0.2f);
-
-    //    // Update sorting order to bring the card to the front when hovered
-    //    if (spriteRenderer != null)
-    //    {
-    //        spriteRenderer.sortingOrder = 99; // Set to a higher value to bring to front
-    //    }
-    //}
-
-    //private void OnMouseExit()
-    //{
-    //    if (!isHovered) return;
-    //    isHovered = false;
-
-    //    scaleTween?.Kill();
-    //    moveTween?.Kill();
-
-    //    // Return to original scale and position when mouse exits
-    //    scaleTween = transform.DOScale(originalScale, 0.2f);
-    //    moveTween = transform.DOLocalMoveZ(originalPosition.z, 0.2f);
-
-    //    // Restore sorting order
-    //    if (spriteRenderer != null)
-    //    {
-    //        spriteRenderer.sortingOrder = originalSortingOrder; // Restore original sorting order
-    //    }
-    //}
+    private void Start()
+    {
+        col = GetComponent<Collider2D>();
+    }
+    private void OnMouseDown()
+    {
+        HandManager.IsDraggingCard = true;
+        CardHoverSystem.Instance.Hide();
+        startDragPosition = transform.position;
+        transform.position = GetMousePositionInWorldSpace();
+        originalRotation = transform.rotation;
+        transform.rotation = Quaternion.identity;
+    }
+    private void OnMouseDrag()
+    {
+        transform.position = GetMousePositionInWorldSpace();
+    }
+    private void OnMouseUp()
+    {
+        HandManager.IsDraggingCard = false;
+        col.enabled = false;
+        Collider2D hitCollider = Physics2D.OverlapPoint(transform.position);
+        col.enabled = true;
+        if (hitCollider != null && hitCollider.TryGetComponent(out ICardDropArea cardDropArea))
+        {
+            cardDropArea.OnCardDrop(this);
+            HandManager.Instance.PlayCardFromHand(this);
+        }
+        else
+        {
+            transform.DOMove(startDragPosition, 0.3f).SetEase(Ease.OutQuad);
+            transform.DORotateQuaternion(originalRotation, 0.3f);
+        }
+    }
+    public Vector3 GetMousePositionInWorldSpace()
+    {
+        Vector3 p = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        p.z = 0f;
+        return p;
+    }
+    private void Flip()
+    {
+        isFlipped = !isFlipped;
+        transform.DORotate(new(0, isFlipped ? 0f : 180f, 0), 0.25f);
+    }
 
 }

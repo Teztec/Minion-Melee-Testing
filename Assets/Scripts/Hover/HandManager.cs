@@ -13,6 +13,8 @@ public class HandManager : MonoBehaviour
     //private List<CardData> allCardData = new(); // List to store card data
     private List<CardData> shuffledDeck = new();
     private bool isDeckLoading = true;
+    public static HandManager Instance { get; private set; }
+    public static bool IsDraggingCard { get; set; } = false;
 
     private void Start()
     {
@@ -22,6 +24,15 @@ public class HandManager : MonoBehaviour
         //shuffledDeck = new List<CardData>(allCardData);
         //ShuffleDeck(shuffledDeck);
 
+    }
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
     }
     private void OnDeckReady()
     {
@@ -69,7 +80,7 @@ public class HandManager : MonoBehaviour
 
         if (behavior != null)
         {
-            behavior.Init(this, cardData); // <-- THIS is crucial!
+            behavior.Init(cardData); // <-- THIS is crucial!
         }
 
         SpriteRenderer sr = g.GetComponentInChildren<SpriteRenderer>();
@@ -122,7 +133,6 @@ public class HandManager : MonoBehaviour
 
             // Remove card from hand
             handCards.Remove(cardBehavior.gameObject);
-            Destroy(cardBehavior.gameObject);
 
             UpdateCardPositions();
         }
