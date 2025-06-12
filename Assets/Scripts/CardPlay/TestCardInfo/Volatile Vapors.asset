@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94d2c7c759ad4c4da664e69912c2748, type: 3}
+  m_Name: Volatile Vapors
+  m_EditorClassIdentifier: 
+  cardName: Volatile Vapors
+  description: "Deal [X0] <sprite name=damage>, grant the next ally attack within
+    the turn +3 <sprite name=damage>\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n<sprite
+    name=react> Target attack gains +2 <sprite name=damage>"
+  artwork: {fileID: -6299473313286000614, guid: 5f676b570a1d4c64e908ac521a7ff8f6, type: 3}
+  Color: {r: 0.7176471, g: 0.3254902, b: 0.11372549, a: 1}
+  cardType: 0
+  baseDamage: 05000000
+  speed: 2
+  targetType: 1
+  hasReact: 1
+  buffs:
+  - {fileID: 0}

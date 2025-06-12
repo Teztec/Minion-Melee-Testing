@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94d2c7c759ad4c4da664e69912c2748, type: 3}
+  m_Name: Undying Willpower
+  m_EditorClassIdentifier: 
+  cardName: Undying Willpower
+  description: "Gain 2 <sprite name=spirit> and draw 2.<line-height=80%>\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500<line-height=80%>\n<line-height=100%><sprite
+    name=react> Sacrifice <sprite name=armor>, granting another Delver 2 <sprite
+    name=armor>\nfor each sacrificed.\n If 2+ <sprite name=armor> is sacrificed,
+    gain 1 <sprite name=spirit>."
+  artwork: {fileID: -63043680006338002, guid: a86da031118adb643bbafc7bd2d33631, type: 3}
+  Color: {fileID: 11400000, guid: 94b0230bf39cc4a4d9145d5846ff9301, type: 2}
+  cardType: 2
+  baseDamage: 00000000
+  speed: 1
+  targetType: 1
+  hasReact: 1
+  CardAmount: 1

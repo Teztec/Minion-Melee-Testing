@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94d2c7c759ad4c4da664e69912c2748, type: 3}
+  m_Name: Assist
+  m_EditorClassIdentifier: 
+  cardName: Assist
+  description: "<b>Reveal:</b> +/- 1 to the speed of a card.\nTarget draws 1 card.
+    \n<sprite name=react> Target gains 1 of the following:\n+1 <sprite name=damage>
+    to target attack.\n+2 <sprite name=armor> to any target."
+  artwork: {fileID: 4606908045521496030, guid: 520bf48cecdc5854db98d2decb889f05, type: 3}
+  Color: {fileID: 11400000, guid: 363bdc8cca8268848978997df5b480a8, type: 2}
+  cardType: 2
+  baseDamage: 
+  speed: 1
+  targetType: 0
+  hasReact: 1
+  CardAmount: 2

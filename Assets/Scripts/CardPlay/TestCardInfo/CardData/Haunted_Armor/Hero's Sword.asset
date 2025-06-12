@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94d2c7c759ad4c4da664e69912c2748, type: 3}
+  m_Name: Hero's Sword
+  m_EditorClassIdentifier: 
+  cardName: "Hero\u2019s Sword"
+  description: 'Gain 1 <sprite name=spirit> and deal [X0] <sprite name=damage>
+
+    You
+    may sacrifice <sprite name=spirit>, gaining +2 <sprite name=damage> per <sprite
+    name=spirit> sacrificed.'
+  artwork: {fileID: -63043680006338002, guid: a86da031118adb643bbafc7bd2d33631, type: 3}
+  Color: {fileID: 11400000, guid: 94b0230bf39cc4a4d9145d5846ff9301, type: 2}
+  cardType: 0
+  baseDamage: 02000000
+  speed: 6
+  targetType: 1
+  hasReact: 0
+  CardAmount: 2

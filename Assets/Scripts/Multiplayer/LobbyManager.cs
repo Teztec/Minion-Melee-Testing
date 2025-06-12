@@ -24,7 +24,7 @@ public class LobbyManager : MonoBehaviour
             var options = new CreateLobbyOptions
             {
                 IsPrivate = false,
-                Player = new Player(id: AuthenticationService.Instance.PlayerId),
+                //Player = new Player(id: AuthenticationService.Instance.PlayerId),
                 Data = new Dictionary<string, DataObject>
                 {
                     { "GameMode", new DataObject(DataObject.VisibilityOptions.Public, "Default") }
