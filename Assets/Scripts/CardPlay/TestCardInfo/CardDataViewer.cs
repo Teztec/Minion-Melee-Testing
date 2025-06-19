@@ -34,13 +34,14 @@ public class CardDataViewer : MonoBehaviour
 
     public void updateDescription()
     {
-
-        if (card.baseDamage.Length < 1) return;
+        string desc = card.description;
 
         for (int i = 0; i < card.baseDamage.Length; i++)
         {
-            descriptionText.text = card.description.Replace($"[X{i}]", card.baseDamage[i].ToString());
+            desc = desc.Replace($"[X{i}]", card.baseDamage[i].ToString());
         }
+
+        descriptionText.text = desc;
     }
 
     public void setCardType()

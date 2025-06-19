@@ -13,6 +13,7 @@ public class DeckViewTester : MonoBehaviour
         foreach (var card in cardstoView)
         {
             GameObject newCard = Instantiate(CardViewPrefab, parentContainer);
+            //newCard.transform.localScale = new Vector3(1f, 1f, 1f);
             CardDataViewer view = newCard.GetComponent<CardDataViewer>();
             view.setup(card);
         }

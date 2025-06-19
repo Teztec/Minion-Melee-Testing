@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94d2c7c759ad4c4da664e69912c2748, type: 3}
+  m_Name: Late Delivery
+  m_EditorClassIdentifier: 
+  cardName: Late Delivery
+  description: "Return 3 cards from the discard to your hand and place 1 in the cauldron.<line-height=80%>\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500<line-height=80%>\n<line-height=100%><sprite
+    name=react> +3 <sprite name=damage> to target attack. Then, at the end of the
+    turn, they heal 2 <sprite name=heart>"
+  artwork: {fileID: -1278698151, guid: 3f796e0b9580c0f4f8b1ca4310945a27, type: 3}
+  Color: {fileID: 11400000, guid: c2d7208195240704ba4d8d08477983d4, type: 2}
+  cardType: 2
+  baseDamage: 
+  speed: 2
+  targetType: 0
+  hasReact: 0
+  CardAmount: 1

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94d2c7c759ad4c4da664e69912c2748, type: 3}
+  m_Name: Crackling Sphere
+  m_EditorClassIdentifier: 
+  cardName: Crackling Sphere
+  description: "Deal 3 <sprite name=damage> to any number of targets.<line-height=80%>\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500<line-height=80%>\n<line-height=100%>[2<sprite
+    name=growth>] +3 <sprite name=damage>. Inflict 1 <sprite name=burn>. \nYou may
+    repeat this effect, increasing <sprite name=growth> cost by 2 each time.<line-height=80%>\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500<line-height=80%>\n<line-height=100%><sprite
+    name=focus> Inflict 2 <sprite name=burn>"
+  artwork: {fileID: -326262062, guid: 3f796e0b9580c0f4f8b1ca4310945a27, type: 3}
+  Color: {fileID: 11400000, guid: fe74896dc609dca4db06160e58043e8e, type: 2}
+  cardType: 0
+  baseDamage: 
+  speed: 4
+  targetType: 0
+  hasReact: 0
+  CardAmount: 2

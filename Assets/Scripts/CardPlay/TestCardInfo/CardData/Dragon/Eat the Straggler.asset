@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94d2c7c759ad4c4da664e69912c2748, type: 3}
+  m_Name: Eat the Straggler
+  m_EditorClassIdentifier: 
+  cardName: Eat the Straggler
+  description: "Deal [X0] <sprite name=damage> to the last Delver\non the timeline.<line-height=115%>\n<line-height=100%>-1
+    <sprite name=damage> for each point of target's speed.<line-height=80%>\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500<line-height=80%>\n<line-height=100%><sprite
+    name=react> If target card is slower than 5, deal 2 <sprite name=damage> and
+    heal 2 <sprite name=heart>"
+  artwork: {fileID: 0}
+  Color: {fileID: 11400000, guid: d7b76c1ee557ceb45a4fa16edcf30735, type: 2}
+  cardType: 0
+  baseDamage: 0a000000
+  speed: 1
+  targetType: 0
+  hasReact: 0
+  CardAmount: 3

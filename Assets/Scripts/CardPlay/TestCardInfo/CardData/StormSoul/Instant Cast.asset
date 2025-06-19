@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94d2c7c759ad4c4da664e69912c2748, type: 3}
+  m_Name: Instant Cast
+  m_EditorClassIdentifier: 
+  cardName: Instant Cast
+  description: "Discard 2 cards from the top of your deck. \nSelect a card with <sprite
+    name=growth> from hand. Perform card\u2019s effect with a [2<sprite name=growth>]
+    and +2 <sprite name=damage>. Then discard it.<line-height=80%>\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500<line-height=80%>\n<line-height=100%><sprite
+    name=focus> Draw 2, discard 1 from hand."
+  artwork: {fileID: -326262062, guid: 3f796e0b9580c0f4f8b1ca4310945a27, type: 3}
+  Color: {fileID: 11400000, guid: fe74896dc609dca4db06160e58043e8e, type: 2}
+  cardType: 0
+  baseDamage: 
+  speed: 6
+  targetType: 0
+  hasReact: 0
+  CardAmount: 1

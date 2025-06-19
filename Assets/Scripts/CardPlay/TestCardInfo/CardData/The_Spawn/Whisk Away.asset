@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94d2c7c759ad4c4da664e69912c2748, type: 3}
+  m_Name: Whisk Away
+  m_EditorClassIdentifier: 
+  cardName: Whisk Away
+  description: "<b>Reveal:</b> You and an ally may move to be adjacent to the other.<line-height=115%>\n<line-height=100%>Per
+    space moved <b>Sacrifice</b> 1 <sprite name=heart> if forward <b>OR</b> 1 <sprite
+    name=lifesteal> if backward.<line-height=80%>\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500<line-height=80%>\n<line-height=100%><sprite
+    name=react> Monster must now retarget."
+  artwork: {fileID: 0}
+  Color: {fileID: 11400000, guid: 3eced6e77a4b9cf4db25ea0c51d5cafd, type: 2}
+  cardType: 2
+  baseDamage: 
+  speed: 10
+  targetType: 0
+  hasReact: 1
+  CardAmount: 2

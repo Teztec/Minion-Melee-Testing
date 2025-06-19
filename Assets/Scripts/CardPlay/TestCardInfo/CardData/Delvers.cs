@@ -5,6 +5,9 @@ using UnityEngine;
 
 public abstract class Delvers : Player
 {
+    [SerializeField]
+    List<CardDataTest> cardInstance = new List<CardDataTest>();
+
     public Delvers()
     {
         maxHealth = 20;
@@ -15,7 +18,8 @@ public abstract class Delvers : Player
 
         drawAmount = 1;
 
-        //CardInstance cardInstance = new CardInstance()
+        
+        
 
         
     }

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94d2c7c759ad4c4da664e69912c2748, type: 3}
+  m_Name: Plot
+  m_EditorClassIdentifier: 
+  cardName: Plot
+  description: "<b>Reveal:</b> +/- 2 to the speed of a card.\nDraw 2 cards.<line-height=80%>\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500<line-height=80%>\n<line-height=115%><sprite
+    name=react> Choose from the following:\n+2 <sprite name=damage> to target attack\nGain
+    3 <sprite name=armor>"
+  artwork: {fileID: 1903880250, guid: 3f796e0b9580c0f4f8b1ca4310945a27, type: 3}
+  Color: {fileID: 11400000, guid: ac752dbe1b27c0546a3b22fc41aeae8f, type: 2}
+  cardType: 1
+  baseDamage: 0000000000000000
+  speed: 9
+  targetType: 0
+  hasReact: 0
+  CardAmount: 3

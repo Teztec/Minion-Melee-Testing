@@ -22,5 +22,18 @@ MonoBehaviour:
   baseDamage: 
   speed: 1
   targetType: 0
-  hasReact: 1
   CardAmount: 2
+  baseEffects:
+  - amount: 1
+    TargetType: 1
+    effecttype: 3
+  - amount: 1
+    TargetType: 1
+    effecttype: 4
+  reactionEffects:
+  - amount: 1
+    TargetType: 1
+    effecttype: 2
+  - amount: 2
+    TargetType: 1
+    effecttype: 1
